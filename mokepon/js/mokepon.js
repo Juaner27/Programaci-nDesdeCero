@@ -49,32 +49,39 @@ function SeleccionarMascotaEnemigo() {
 
 function ataqueFuego() {
     AtaqueJugador = "FUEGO"
-    alert(AtaqueJugador)
+    AtaqueAleatorioEnemigo()
 }
+
 function ataqueAgua() {
     AtaqueJugador = "AGUA"
-    alert(AtaqueJugador)
+    AtaqueAleatorioEnemigo()
 }
+
 function ataqueTierra() {
     AtaqueJugador = "TIERRA"
-    alert(AtaqueJugador)
+    AtaqueAleatorioEnemigo()
 }
+
+function AtaqueAleatorioEnemigo(){
+    let AtaqueAleatorio = aleatorio(1,3)
+
+    if(AtaqueAleatorio == 1) {
+        AtaqueEnemigo = "FUEGO"
+    } 
+    else if(AtaqueAleatorio == 2) {
+        AtaqueEnemigo = "AGUA"
+    }
+    else {
+        AtaqueEnemigo = "TIERRA"
+    }
+}
+
+
 
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min +1) + min)
 }
 
-
-
-function SeleccionarAtaqueJugador(){
-
-}
-
-
-
-function SeleccionarAtaqueEnemigo (){
-
-}
 
 window.addEventListener("load", IniciarJuego)
 //<p>
