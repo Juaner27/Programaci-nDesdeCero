@@ -1,5 +1,6 @@
 let AtaqueJugador
 
+let AtaqueEnemigo
 
 function IniciarJuego() {
     let BotonMascotaJugador = document.getElementById("boton-mascota")
@@ -7,9 +8,9 @@ function IniciarJuego() {
 
     let botonFuego = document.getElementById("boton-fuego")
     botonFuego.addEventListener("click", ataqueFuego) 
-    let botonAgua = document.getElementById("boton-fuego")
+    let botonAgua = document.getElementById("boton-agua")
     botonAgua.addEventListener("click", ataqueAgua) 
-    let botonTierra = document.getElementById("boton-fuego") 
+    let botonTierra = document.getElementById("boton-tierra") 
     botonTierra.addEventListener("click", ataqueTierra)
 }
 
@@ -74,8 +75,19 @@ function AtaqueAleatorioEnemigo(){
     else {
         AtaqueEnemigo = "TIERRA"
     }
+
+    CrearMensaje()
+
 }
 
+function CrearMensaje() {
+    let sectionMensajes = document.getElementById("Mensajes")
+    
+    let parrafo = document.createElement("p")
+    parrafo.innerHTML = "Tu mascota atacó con " + AtaqueJugador + ", la mascota del enemigo atacó con " + AtaqueEnemigo + " pendiente"
+
+    sectionMensajes.appendChild(parrafo)
+}
 
 
 function aleatorio(min, max) {
@@ -84,6 +96,7 @@ function aleatorio(min, max) {
 
 
 window.addEventListener("load", IniciarJuego)
+
 //<p>
 //    Hipodoge -> Agua
 //    Capipepo -> Tierra
