@@ -1,6 +1,7 @@
 let AtaqueJugador
-
 let AtaqueEnemigo
+let VidasJugador = 3
+let VidasEnemigo = 3
 
 function IniciarJuego() {
     let BotonMascotaJugador = document.getElementById("boton-mascota")
@@ -81,25 +82,37 @@ function AtaqueAleatorioEnemigo(){
 }
 
 function Combate() {
+    let spanVidasJugador = document.getElementById("vidas-jugador")
+    let spanVidasEnemigo = document.getElementById("vidas-enemigo")
+
     if (AtaqueJugador == AtaqueEnemigo) {
         CrearMensaje("EMPATE")
     }
 
     else if (AtaqueJugador == "FUEGO" && AtaqueEnemigo == "TIERRA"){
         CrearMensaje("GANASTE")
+        VidasEnemigo--
+        spanVidasEnemigo.innerHTML = VidasEnemigo
     }
 
     else if (AtaqueJugador == "AGUA" && AtaqueEnemigo == "FUEGO"){
         CrearMensaje("GANASTE")
+        VidasEnemigo--
+        spanVidasEnemigo.innerHTML = VidasEnemigo
     }
 
     else if (AtaqueJugador == "TIERRA" && AtaqueEnemigo == "AGUA"){
         CrearMensaje("GANASTE")
+        VidasEnemigo--
+        spanVidasEnemigo.innerHTML = VidasEnemigo
     }
 
     else {
         CrearMensaje("PERDISTE")
+        VidasJugador--
+        spanVidasJugador.innerHTML = VidasJugador
     }
+    
 }
 
 
