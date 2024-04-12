@@ -6,6 +6,7 @@ let VidasEnemigo = 3
 function IniciarJuego() {
     let sectionSeleccionarAtaque = document.getElementById("Seleccionar_Ataque")
     sectionSeleccionarAtaque.style.display = "none"
+    
     let sectionReiniciar = document.getElementById("Reiniciar")
     sectionReiniciar.style.display = "none"
    
