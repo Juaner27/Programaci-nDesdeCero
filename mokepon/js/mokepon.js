@@ -9,6 +9,9 @@ function IniciarJuego() {
     
     let sectionReiniciar = document.getElementById("Reiniciar")
     sectionReiniciar.style.display = "none"
+
+    let sectionMensajes = document.getElementById("Mensajes")
+    sectionMensajes.style.display = "none"
    
     let BotonMascotaJugador = document.getElementById("boton-mascota")
     BotonMascotaJugador.addEventListener("click", SeleccionarMascotaJugador)
@@ -30,6 +33,9 @@ function SeleccionarMascotaJugador() {
 
     let sectionSeleccionarAtaque = document.getElementById("Seleccionar_Ataque")
     sectionSeleccionarAtaque.style.display = "block"
+
+    let sectionMensajes = document.getElementById("Mensajes")
+    sectionMensajes.style.display = "block"
 
     let inputHipodoge = document.getElementById("Hipodoge")
     let inputCapipepo = document.getElementById("Capipepo")
