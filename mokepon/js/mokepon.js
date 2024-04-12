@@ -120,7 +120,7 @@ function CrearMensaje(ResultadoCombate) {
     let sectionMensajes = document.getElementById("Mensajes")
     
     let parrafo = document.createElement("p")
-    parrafo.innerHTML = "Tu mascota atacó por primera vez con " + AtaqueJugador + ", la mascota del enemigo atacó con " + AtaqueEnemigo + ", significa que: " + ResultadoCombate
+    parrafo.innerHTML = "Tu mascota atacó con " + AtaqueJugador + ", la mascota del enemigo atacó con " + AtaqueEnemigo + ", significa que: " + ResultadoCombate
 
     sectionMensajes.appendChild(parrafo)
 }
